@@ -1,11 +1,13 @@
+// Exercício finalizado com auxílio do gabarito (parte bônus)
 import React from 'react';
 import Pokemon from './Pokemon';
 import Button from './Button';
 import './pokedex.css';
 
 class Pokedex extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+    
     this.state = {
       pokemonIndex: 0,
       filteredType: 'all',
@@ -68,7 +70,7 @@ class Pokedex extends React.Component {
           onClick={() => this.nextPokemon(filteredPokemons.length)}
           disabled={ filteredPokemons.length <= 1 }
         >
-          Próximo pokémon
+          Próximo pokemon
         </Button>
       </div>
     );
